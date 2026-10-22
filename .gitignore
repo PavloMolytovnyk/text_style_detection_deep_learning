@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+.env
+experiments/
+reports/reevaluation/
+# Keep the small trained CNN/BiLSTM artifacts in the repository for a working demo.
+# Store large transformer weights with Git LFS when publishing on GitHub.

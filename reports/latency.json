@@ -1,0 +1,10 @@
+{
+  "model": "transformer",
+  "device": "cpu",
+  "torch_threads": 2,
+  "sample_characters": 67,
+  "repetitions": 10,
+  "median_ms": 42.489835500191475,
+  "p95_ms": 47.01107399978355,
+  "note": "Local short-message microbenchmark, excludes model loading and HTTP transport; p95 estimated from 10 samples."
+}

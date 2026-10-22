@@ -1,0 +1,327 @@
+{
+  "schema_version": 1,
+  "architecture": "cnn",
+  "model_config": {
+    "vocab_size": 6168,
+    "embedding_dim": 128,
+    "dropout": 0.4,
+    "pad_id": 0,
+    "channels": 96,
+    "kernels": [
+      3,
+      4,
+      5
+    ]
+  },
+  "tokenizer_kind": "vocabulary",
+  "max_length": 256,
+  "labels": {
+    "style": [
+      "academic",
+      "business",
+      "formal",
+      "informal",
+      "literary"
+    ],
+    "tone": [
+      "aggressive",
+      "friendly",
+      "neutral",
+      "sarcastic",
+      "urgent"
+    ]
+  },
+  "temperatures": {
+    "style": 0.8037706017494202,
+    "tone": 0.5492548942565918
+  },
+  "seed": 42,
+  "best_epoch": 29,
+  "epochs_run": 35,
+  "training_seconds": 30.324397525999984,
+  "training_device": "cpu",
+  "parameter_count": 940138,
+  "learning_rate": 0.001,
+  "batch_size": 32,
+  "loss": "CrossEntropy(style) + CrossEntropy(tone)",
+  "selection_metric": "mean validation macro F1",
+  "validation": {
+    "style": {
+      "accuracy": 0.8354430379746836,
+      "f1_macro": 0.831633224133224,
+      "f1_weighted": 0.8329542430808253,
+      "roc_auc_ovr_macro": 0.9647991071428571,
+      "negative_log_likelihood": 0.5283143520355225,
+      "ece_10_bins": 0.07448611474489863,
+      "confusion_matrix": [
+        [
+          31,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          2,
+          20,
+          5,
+          2,
+          1
+        ],
+        [
+          5,
+          4,
+          23,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          30,
+          1
+        ],
+        [
+          3,
+          1,
+          0,
+          0,
+          28
+        ]
+      ],
+      "classification_report": {
+        "academic": {
+          "precision": 0.7380952380952381,
+          "recall": 0.96875,
+          "f1-score": 0.8378378378378378,
+          "support": 32.0
+        },
+        "business": {
+          "precision": 0.8,
+          "recall": 0.6666666666666666,
+          "f1-score": 0.7272727272727273,
+          "support": 30.0
+        },
+        "formal": {
+          "precision": 0.8214285714285714,
+          "recall": 0.71875,
+          "f1-score": 0.7666666666666667,
+          "support": 32.0
+        },
+        "informal": {
+          "precision": 0.9375,
+          "recall": 0.9375,
+          "f1-score": 0.9375,
+          "support": 32.0
+        },
+        "literary": {
+          "precision": 0.9032258064516129,
+          "recall": 0.875,
+          "f1-score": 0.8888888888888888,
+          "support": 32.0
+        },
+        "accuracy": 0.8354430379746836,
+        "macro avg": {
+          "precision": 0.8400499231950844,
+          "recall": 0.8333333333333333,
+          "f1-score": 0.831633224133224,
+          "support": 158.0
+        },
+        "weighted avg": {
+          "precision": 0.8405568842481868,
+          "recall": 0.8354430379746836,
+          "f1-score": 0.8329542430808253,
+          "support": 158.0
+        }
+      }
+    },
+    "tone": {
+      "accuracy": 0.9367088607594937,
+      "f1_macro": 0.9353661141893699,
+      "f1_weighted": 0.9367181385025544,
+      "roc_auc_ovr_macro": 0.9949368787899437,
+      "negative_log_likelihood": 0.20843824744224548,
+      "ece_10_bins": 0.03381180951866922,
+      "confusion_matrix": [
+        [
+          33,
+          0,
+          0,
+          0,
+          2
+        ],
+        [
+          0,
+          32,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          30,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          4,
+          26,
+          1
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          27
+        ]
+      ],
+      "classification_report": {
+        "aggressive": {
+          "precision": 0.9705882352941176,
+          "recall": 0.9428571428571428,
+          "f1-score": 0.9565217391304348,
+          "support": 35.0
+        },
+        "friendly": {
+          "precision": 0.9696969696969697,
+          "recall": 0.9696969696969697,
+          "f1-score": 0.9696969696969697,
+          "support": 33.0
+        },
+        "neutral": {
+          "precision": 0.8823529411764706,
+          "recall": 0.967741935483871,
+          "f1-score": 0.9230769230769231,
+          "support": 31.0
+        },
+        "sarcastic": {
+          "precision": 1.0,
+          "recall": 0.8387096774193549,
+          "f1-score": 0.9122807017543859,
+          "support": 31.0
+        },
+        "urgent": {
+          "precision": 0.8709677419354839,
+          "recall": 0.9642857142857143,
+          "f1-score": 0.9152542372881356,
+          "support": 28.0
+        },
+        "accuracy": 0.9367088607594937,
+        "macro avg": {
+          "precision": 0.9387211776206084,
+          "recall": 0.9366582879486106,
+          "f1-score": 0.9353661141893699,
+          "support": 158.0
+        },
+        "weighted avg": {
+          "precision": 0.9412064948478369,
+          "recall": 0.9367088607594937,
+          "f1-score": 0.9367181385025544,
+          "support": 158.0
+        }
+      }
+    },
+    "mean_macro_f1": 0.883499669161297,
+    "joint_accuracy": 0.7974683544303798
+  },
+  "data_manifest": {
+    "source_sha256": "078c8106329a2caffa6636ed02f4fcdbe23ab730693c051c1ecb6e7643200cb7",
+    "source_rows": 1000,
+    "empty_removed": 0,
+    "duplicates_removed": 0,
+    "conflicting_groups_removed": 1,
+    "conflicting_rows_removed": 2,
+    "excluded_conflicts": [
+      {
+        "text": "Respond immediately.",
+        "style": "business",
+        "tone": "urgent"
+      },
+      {
+        "text": "Respond immediately.",
+        "style": "formal",
+        "tone": "urgent"
+      }
+    ],
+    "label_aliases_fixed": 200,
+    "clean_rows": 998,
+    "seed": 42,
+    "near_duplicate_groups": 968,
+    "grouping": {
+      "word_trigram_jaccard": 0.82,
+      "containment": 0.95,
+      "min_length_ratio": 0.5
+    },
+    "strategy": "Nested five-fold StratifiedGroupKFold, joint style/tone strata, first folds",
+    "approximate_ratios": {
+      "train": 0.64,
+      "validation": 0.16,
+      "test": 0.2
+    },
+    "splits": {
+      "train": {
+        "rows": 632,
+        "sha256": "bf70d74eb7775b387867c7b94c5cffe74b8488fd711229c1c880f3ce6b29af23",
+        "style": {
+          "academic": 128,
+          "business": 120,
+          "formal": 128,
+          "informal": 128,
+          "literary": 128
+        },
+        "tone": {
+          "aggressive": 125,
+          "sarcastic": 129,
+          "neutral": 129,
+          "urgent": 122,
+          "friendly": 127
+        }
+      },
+      "validation": {
+        "rows": 158,
+        "sha256": "a1886267233bdf51109731ce90a3dfc6bf2ac94d2f1fd8c5e10aac64f654a7da",
+        "style": {
+          "informal": 32,
+          "formal": 32,
+          "academic": 32,
+          "literary": 32,
+          "business": 30
+        },
+        "tone": {
+          "sarcastic": 31,
+          "friendly": 33,
+          "aggressive": 35,
+          "neutral": 31,
+          "urgent": 28
+        }
+      },
+      "test": {
+        "rows": 208,
+        "sha256": "bf82c29cbecb9ea2479c276f6152ad8ff8f8ba942da299e93d31a7d4c098d796",
+        "style": {
+          "business": 49,
+          "academic": 40,
+          "literary": 40,
+          "informal": 40,
+          "formal": 39
+        },
+        "tone": {
+          "neutral": 40,
+          "aggressive": 40,
+          "urgent": 48,
+          "sarcastic": 40,
+          "friendly": 40
+        }
+      }
+    }
+  },
+  "torch_version": "2.8.0+cpu",
+  "weights_sha256": "f12563ca1d878d704e2198bcc6d6d4e716b524ad73a9328b60b54beb0159d067",
+  "created_at_utc": "2026-10-22T08:07:15.144803+00:00",
+  "pretrained_source": null
+}

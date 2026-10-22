@@ -1,0 +1,29 @@
+{
+  "text": "Dear team, please send the revised budget before our meeting today.",
+  "prediction": {
+    "model": "transformer",
+    "warnings": [],
+    "token_count": 15,
+    "truncated": false,
+    "unknown_ratio": 0.0,
+    "latency_ms": 47.289,
+    "style": "business",
+    "style_confidence": 0.9945517182350159,
+    "style_scores": {
+      "academic": 0.00020744570065289736,
+      "business": 0.9945517182350159,
+      "formal": 0.004024522844702005,
+      "informal": 0.0011513506760820746,
+      "literary": 6.497192225651816e-05
+    },
+    "tone": "neutral",
+    "tone_confidence": 0.9666418433189392,
+    "tone_scores": {
+      "aggressive": 0.0022779733408242464,
+      "friendly": 0.00901099480688572,
+      "neutral": 0.9666418433189392,
+      "sarcastic": 0.00878474023193121,
+      "urgent": 0.013284330256283283
+    }
+  }
+}

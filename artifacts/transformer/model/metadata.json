@@ -1,0 +1,399 @@
+{
+  "schema_version": 1,
+  "architecture": "transformer",
+  "model_config": {
+    "encoder_config": {
+      "vocab_size": 28996,
+      "max_position_embeddings": 512,
+      "sinusoidal_pos_embds": false,
+      "n_layers": 6,
+      "n_heads": 12,
+      "dim": 768,
+      "hidden_dim": 3072,
+      "dropout": 0.1,
+      "attention_dropout": 0.1,
+      "activation": "gelu",
+      "initializer_range": 0.02,
+      "qa_dropout": 0.1,
+      "seq_classif_dropout": 0.2,
+      "return_dict": true,
+      "output_hidden_states": false,
+      "torchscript": false,
+      "dtype": null,
+      "pruned_heads": {},
+      "tie_word_embeddings": true,
+      "chunk_size_feed_forward": 0,
+      "is_encoder_decoder": false,
+      "is_decoder": false,
+      "cross_attention_hidden_size": null,
+      "add_cross_attention": false,
+      "tie_encoder_decoder": false,
+      "architectures": [
+        "DistilBertForMaskedLM"
+      ],
+      "finetuning_task": null,
+      "id2label": {
+        "0": "LABEL_0",
+        "1": "LABEL_1"
+      },
+      "label2id": {
+        "LABEL_0": 0,
+        "LABEL_1": 1
+      },
+      "task_specific_params": null,
+      "problem_type": null,
+      "tokenizer_class": null,
+      "prefix": null,
+      "bos_token_id": null,
+      "pad_token_id": 0,
+      "eos_token_id": null,
+      "sep_token_id": null,
+      "decoder_start_token_id": null,
+      "max_length": 20,
+      "min_length": 0,
+      "do_sample": false,
+      "early_stopping": false,
+      "num_beams": 1,
+      "temperature": 1.0,
+      "top_k": 50,
+      "top_p": 1.0,
+      "typical_p": 1.0,
+      "repetition_penalty": 1.0,
+      "length_penalty": 1.0,
+      "no_repeat_ngram_size": 0,
+      "encoder_no_repeat_ngram_size": 0,
+      "bad_words_ids": null,
+      "num_return_sequences": 1,
+      "output_scores": false,
+      "return_dict_in_generate": false,
+      "forced_bos_token_id": null,
+      "forced_eos_token_id": null,
+      "remove_invalid_values": false,
+      "exponential_decay_length_penalty": null,
+      "suppress_tokens": null,
+      "begin_suppress_tokens": null,
+      "num_beam_groups": 1,
+      "diversity_penalty": 0.0,
+      "_name_or_path": "distilbert/distilbert-base-cased",
+      "transformers_version": "4.57.1",
+      "model_type": "distilbert",
+      "output_past": true,
+      "tie_weights_": true,
+      "tf_legacy_loss": false,
+      "use_bfloat16": false,
+      "output_attentions": false
+    },
+    "dropout": 0.3
+  },
+  "tokenizer_kind": "transformer",
+  "max_length": 192,
+  "labels": {
+    "style": [
+      "academic",
+      "business",
+      "formal",
+      "informal",
+      "literary"
+    ],
+    "tone": [
+      "aggressive",
+      "friendly",
+      "neutral",
+      "sarcastic",
+      "urgent"
+    ]
+  },
+  "temperatures": {
+    "style": 0.890869140625,
+    "tone": 0.6399454474449158
+  },
+  "seed": 42,
+  "best_epoch": 3,
+  "epochs_run": 4,
+  "training_seconds": 748.81422288,
+  "training_device": "cpu",
+  "parameter_count": 65198602,
+  "learning_rate": 2e-05,
+  "batch_size": 8,
+  "loss": "CrossEntropy(style) + CrossEntropy(tone)",
+  "selection_metric": "mean validation macro F1",
+  "validation": {
+    "style": {
+      "accuracy": 0.9177215189873418,
+      "f1_macro": 0.916565934065934,
+      "f1_weighted": 0.9178832243705661,
+      "roc_auc_ovr_macro": 0.992936507936508,
+      "negative_log_likelihood": 0.1964261382818222,
+      "ece_10_bins": 0.05462343575833718,
+      "confusion_matrix": [
+        [
+          32,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          26,
+          3,
+          1,
+          0
+        ],
+        [
+          0,
+          7,
+          25,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          30,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          32
+        ]
+      ],
+      "classification_report": {
+        "academic": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 32.0
+        },
+        "business": {
+          "precision": 0.7647058823529411,
+          "recall": 0.8666666666666667,
+          "f1-score": 0.8125,
+          "support": 30.0
+        },
+        "formal": {
+          "precision": 0.8928571428571429,
+          "recall": 0.78125,
+          "f1-score": 0.8333333333333334,
+          "support": 32.0
+        },
+        "informal": {
+          "precision": 0.967741935483871,
+          "recall": 0.9375,
+          "f1-score": 0.9523809523809523,
+          "support": 32.0
+        },
+        "literary": {
+          "precision": 0.9696969696969697,
+          "recall": 1.0,
+          "f1-score": 0.9846153846153847,
+          "support": 32.0
+        },
+        "accuracy": 0.9177215189873418,
+        "macro avg": {
+          "precision": 0.919000386078185,
+          "recall": 0.9170833333333335,
+          "f1-score": 0.916565934065934,
+          "support": 158.0
+        },
+        "weighted avg": {
+          "precision": 0.9209534810620487,
+          "recall": 0.9177215189873418,
+          "f1-score": 0.9178832243705661,
+          "support": 158.0
+        }
+      }
+    },
+    "tone": {
+      "accuracy": 0.9873417721518988,
+      "f1_macro": 0.9870833333333333,
+      "f1_weighted": 0.9873285864978903,
+      "roc_auc_ovr_macro": 0.9997967995935992,
+      "negative_log_likelihood": 0.06236586347222328,
+      "ece_10_bins": 0.0076640555752983345,
+      "confusion_matrix": [
+        [
+          35,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          33,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          31,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          2,
+          29,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          28
+        ]
+      ],
+      "classification_report": {
+        "aggressive": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 35.0
+        },
+        "friendly": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 33.0
+        },
+        "neutral": {
+          "precision": 0.9393939393939394,
+          "recall": 1.0,
+          "f1-score": 0.96875,
+          "support": 31.0
+        },
+        "sarcastic": {
+          "precision": 1.0,
+          "recall": 0.9354838709677419,
+          "f1-score": 0.9666666666666667,
+          "support": 31.0
+        },
+        "urgent": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 28.0
+        },
+        "accuracy": 0.9873417721518988,
+        "macro avg": {
+          "precision": 0.9878787878787879,
+          "recall": 0.9870967741935484,
+          "f1-score": 0.9870833333333333,
+          "support": 158.0
+        },
+        "weighted avg": {
+          "precision": 0.9881089374760261,
+          "recall": 0.9873417721518988,
+          "f1-score": 0.9873285864978903,
+          "support": 158.0
+        }
+      }
+    },
+    "mean_macro_f1": 0.9518246336996337,
+    "joint_accuracy": 0.9050632911392406
+  },
+  "data_manifest": {
+    "source_sha256": "078c8106329a2caffa6636ed02f4fcdbe23ab730693c051c1ecb6e7643200cb7",
+    "source_rows": 1000,
+    "empty_removed": 0,
+    "duplicates_removed": 0,
+    "conflicting_groups_removed": 1,
+    "conflicting_rows_removed": 2,
+    "excluded_conflicts": [
+      {
+        "text": "Respond immediately.",
+        "style": "business",
+        "tone": "urgent"
+      },
+      {
+        "text": "Respond immediately.",
+        "style": "formal",
+        "tone": "urgent"
+      }
+    ],
+    "label_aliases_fixed": 200,
+    "clean_rows": 998,
+    "seed": 42,
+    "near_duplicate_groups": 968,
+    "grouping": {
+      "word_trigram_jaccard": 0.82,
+      "containment": 0.95,
+      "min_length_ratio": 0.5
+    },
+    "strategy": "Nested five-fold StratifiedGroupKFold, joint style/tone strata, first folds",
+    "approximate_ratios": {
+      "train": 0.64,
+      "validation": 0.16,
+      "test": 0.2
+    },
+    "splits": {
+      "train": {
+        "rows": 632,
+        "sha256": "bf70d74eb7775b387867c7b94c5cffe74b8488fd711229c1c880f3ce6b29af23",
+        "style": {
+          "academic": 128,
+          "business": 120,
+          "formal": 128,
+          "informal": 128,
+          "literary": 128
+        },
+        "tone": {
+          "aggressive": 125,
+          "sarcastic": 129,
+          "neutral": 129,
+          "urgent": 122,
+          "friendly": 127
+        }
+      },
+      "validation": {
+        "rows": 158,
+        "sha256": "a1886267233bdf51109731ce90a3dfc6bf2ac94d2f1fd8c5e10aac64f654a7da",
+        "style": {
+          "informal": 32,
+          "formal": 32,
+          "academic": 32,
+          "literary": 32,
+          "business": 30
+        },
+        "tone": {
+          "sarcastic": 31,
+          "friendly": 33,
+          "aggressive": 35,
+          "neutral": 31,
+          "urgent": 28
+        }
+      },
+      "test": {
+        "rows": 208,
+        "sha256": "bf82c29cbecb9ea2479c276f6152ad8ff8f8ba942da299e93d31a7d4c098d796",
+        "style": {
+          "business": 49,
+          "academic": 40,
+          "literary": 40,
+          "informal": 40,
+          "formal": 39
+        },
+        "tone": {
+          "neutral": 40,
+          "aggressive": 40,
+          "urgent": 48,
+          "sarcastic": 40,
+          "friendly": 40
+        }
+      }
+    }
+  },
+  "torch_version": "2.8.0+cpu",
+  "weights_sha256": "16b7aa888fe122f52b9f5459ef1611577795b139b7b15c39e97bf23cc4edab4a",
+  "created_at_utc": "2026-10-22T08:22:09.257768+00:00",
+  "pretrained_source": "distilbert/distilbert-base-cased"
+}

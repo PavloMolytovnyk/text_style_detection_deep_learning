@@ -1,0 +1,38 @@
+{
+  "pytest": {
+    "passed": 20,
+    "failed": 0,
+    "note": "One third-party Starlette TestClient deprecation warning"
+  },
+  "ruff": "passed",
+  "notebook": {
+    "executed_code_cells": 13,
+    "errors": 0,
+    "method": "IPython in-process execution with actual plots and predictions"
+  },
+  "live_service": {
+    "api_ready": {
+      "status": 200
+    },
+    "swagger": {
+      "status": 200
+    },
+    "streamlit_health": {
+      "status": 200
+    },
+    "prediction": {
+      "model": "transformer",
+      "style": "informal",
+      "tone": "friendly"
+    },
+    "ui_to_api_to_transformer": "passed"
+  },
+  "presentation": {
+    "uk_slides": 7,
+    "en_slides": 7,
+    "charts_editable": true,
+    "all_slide_previews_visually_reviewed": true
+  },
+  "platform": "Linux, Python 3.12, PyTorch 2.8.0+cpu",
+  "windows_note": "Launcher syntax prepared; no native Windows session available in build environment"
+}

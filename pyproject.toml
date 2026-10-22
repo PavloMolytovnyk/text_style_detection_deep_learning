@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "text-style-detection-dl"
+version = "1.0.0"
+description = "English text style and tone classification with PyTorch neural networks"
+requires-python = ">=3.11,<3.14"
+
+[tool.setuptools.packages.find]
+include = ["textstyle*", "app*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = "-ra"
+
+[tool.ruff]
+target-version = "py311"
+line-length = 120
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I", "B", "UP"]
+ignore = ["E402"]

@@ -1,0 +1,17 @@
+﻿Epic ID,Epic,Story ID,User story,Task ID,Task,Owner role,Implementation state,Acceptance criteria
+E1,Data quality,US1,"Як дослідник, я хочу перевірений корпус",T1,Audit labels and empty texts,Data,Implemented,1000 source rows audited; literaly normalized
+E1,Data quality,US1,"Як дослідник, я хочу перевірений корпус",T2,Exclude conflicting duplicates,Data,Implemented,Both conflicting texts listed in excluded_conflicts.csv
+E1,Data quality,US2,"Як дослідник, я хочу незалежний тест",T3,Group similar texts and create splits,Data,Implemented,No group/sample overlap; split checksums match
+E2,Neural models,US3,"Як дослідник, я хочу порівняти нейромережі",T4,Train shared-encoder CNN,Research,Implemented,Two neural heads; saved weights and history
+E2,Neural models,US3,"Як дослідник, я хочу порівняти нейромережі",T5,Train attention BiLSTM,Research,Implemented,Packed sequences; saved weights and history
+E2,Neural models,US3,"Як дослідник, я хочу порівняти нейромережі",T6,Fine-tune DistilBERT,Research,Implemented,Encoder and both heads updated; saved tokenizer
+E2,Neural models,US4,"Як викладач, я хочу перевірити результати",T7,Evaluate and calibrate models,Research,Implemented,"Macro F1, confusion matrices and errors.csv saved"
+E2,Neural models,US4,"Як викладач, я хочу перевірити результати",T8,Execute research notebook,Research,Implemented,"EDA, preprocessing, modeling and evaluation outputs present"
+E3,Service,US5,"Як користувач, я хочу аналізувати текст",T9,Implement FastAPI endpoints,Backend,Implemented,"Predict both/style/tone, batch, validation and 503 tests pass"
+E3,Service,US5,"Як користувач, я хочу аналізувати текст",T10,Implement Streamlit interface,Frontend,Implemented,"Single analysis, batch CSV and quality tab work"
+E3,Service,US6,"Як користувач, я хочу простий локальний запуск",T11,Provide launchers and documentation,Backend,Implemented,Windows batch and python run.py documented; Docker optional
+E4,Quality,US7,"Як команда, ми хочемо відтворюваність",T12,"Test neural behavior, API and UI",QA,Implemented,pytest and ruff pass
+E4,Quality,US7,"Як команда, ми хочемо відтворюваність",T13,Set up real repository and team reviews,Team,To do,"Actual assignees, meaningful commits and reviews exist"
+E5,Presentation,US8,"Як слухач, я хочу зрозуміти користь",T14,Prepare Ukrainian and English slides,Presentation,Implemented,Editable decks and matching speaking scripts included
+E5,Presentation,US8,"Як слухач, я хочу зрозуміти користь",T15,Rehearse and present live demo,Team,To do,Each member explains their actual contribution
+E6,External validation,US9,"Як замовник, я хочу якість на реальних текстах",T16,Collect independent real-domain corpus,Data,To do,Separate authors/topics; independently reviewed labels

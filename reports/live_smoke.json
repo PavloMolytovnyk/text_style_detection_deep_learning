@@ -1,0 +1,17 @@
+{
+  "api_ready": {
+    "status": 200
+  },
+  "swagger": {
+    "status": 200
+  },
+  "streamlit_health": {
+    "status": 200
+  },
+  "prediction": {
+    "model": "transformer",
+    "style": "informal",
+    "tone": "friendly"
+  },
+  "ui_to_api_to_transformer": "passed"
+}
